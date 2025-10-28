@@ -44,7 +44,7 @@ variable "attempt_deadline" {
 
 variable "retry_config" {
   description = "If a job does not complete successfully, then it will be retried with exponential backoff"
-  type        = object({
+  type = object({
     retry_count          = optional(number)
     max_retry_duration   = optional(string)
     min_backoff_duration = optional(string)
@@ -76,7 +76,7 @@ variable "paused" {
 
 variable "pubsub_target" {
   description = "Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic"
-  type        = object({
+  type = object({
     topic_name = string
     data       = optional(string)
     attributes = optional(map(string), {})
@@ -86,36 +86,36 @@ variable "pubsub_target" {
 
 variable "app_engine_http_target" {
   description = "App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance"
-  type        = object({
+  type = object({
     http_method = optional(string)
     app_engine_routing = optional(object({
-      service = optional(string)
-      version = optional(string)
+      service  = optional(string)
+      version  = optional(string)
       instance = optional(string)
     }))
     relative_uri = optional(string)
-    body = optional(string)
+    body         = optional(string)
     headers = optional(object({
-          name  = string
-          value = string
-        }), null)
+      name  = string
+      value = string
+    }), null)
   })
   default = null
 }
 
 variable "http_target" {
   description = "If the job providers a http_target the cron will send a request to the targeted url"
-  type        = object({
-    uri = string
+  type = object({
+    uri         = string
     http_method = optional(string)
-    body = optional(string)
+    body        = optional(string)
     oath_token = optional(object({
       service_account_email = string
-      scope = optional(string)
+      scope                 = optional(string)
     }))
     oidc_token = optional(object({
       service_account_email = string
-      audience = optional(string)
+      audience              = optional(string)
     }))
   })
   default = null

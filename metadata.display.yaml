@@ -30,10 +30,10 @@ spec:
         app_engine_http_target:
           name: app_engine_http_target
           title: App Engine Http Target
+          level: 1
         attempt_deadline:
           name: attempt_deadline
           title: Attempt Deadline
-          level: 1
         description:
           name: description
           title: Description

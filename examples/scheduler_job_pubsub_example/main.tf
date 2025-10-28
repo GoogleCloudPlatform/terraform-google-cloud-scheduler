@@ -17,15 +17,17 @@
 module "cloud_scheduler" {
   source = "../.."
 
-  name             = var.name
-  description      = "Sample Cloud scheduler"
-  project_id       = var.project_id
-  location         = "us-central1"
-  schedule         = "*/4 * * * *"
+  name        = var.name
+  description = "Sample Cloud scheduler"
+  project_id  = var.project_id
+  location    = "us-central1"
+  schedule    = "*/4 * * * *"
+
 
   retry_config = {
     retry_count = 1
   }
+
   pubsub_target = {
     topic_name = "projects/${var.project_id}/topics/topic_id"
     data       = base64encode("test")

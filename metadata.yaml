@@ -95,48 +95,50 @@ spec:
         connections:
           - source:
               source: github.com/terraform-google-modules/terraform-google-pubsub
-              version: ~> 4.2
+              version: ~> 8.3.2
             spec:
-              outputExpr: topic_name
+              outputExpr: id
+              inputPath: topic_name
       - name: app_engine_http_target
         description: App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance
         varType: |-
           object({
               http_method = optional(string)
               app_engine_routing = optional(object({
-                service = optional(string)
-                version = optional(string)
+                service  = optional(string)
+                version  = optional(string)
                 instance = optional(string)
               }))
               relative_uri = optional(string)
-              body = optional(string)
+              body         = optional(string)
               headers = optional(object({
-                    name  = string
-                    value = string
-                  }), null)
+                name  = string
+                value = string
+              }), null)
             })
-        # TODO: Update the connections
       - name: http_target
         description: If the job providers a http_target the cron will send a request to the targeted url
         varType: |-
           object({
-              uri = string
+              uri         = string
               http_method = optional(string)
-              body = optional(string)
+              body        = optional(string)
               oath_token = optional(object({
                 service_account_email = string
-                scope = optional(string)
+                scope                 = optional(string)
               }))
               oidc_token = optional(object({
                 service_account_email = string
-                audience = optional(string)
+                audience              = optional(string)
               }))
             })
     outputs:
       - name: id
         description: An identifier for the resource
+        type: string
       - name: state
         description: State of the job
+        type: string
   requirements:
     roles:
       - level: Project
