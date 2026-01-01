@@ -66,3 +66,7 @@ spec:
         time_zone:
           name: time_zone
           title: Time Zone
+    runtime:
+      outputs:
+        id:
+          visibility: VISIBILITY_ROOT
