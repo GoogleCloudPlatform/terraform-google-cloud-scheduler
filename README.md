@@ -1,34 +1,7 @@
 # terraform-google-cloud-scheduler
 
 ## Description
-### Tagline
-This is an auto-generated module.
-
-### Detailed
-This module was generated from [terraform-google-module-template](https://github.com/terraform-google-modules/terraform-google-module-template/), which by default generates a module that simply creates a GCS bucket. As the module develops, this README should be updated.
-
-The resources/services/activations/deletions that this module will create/trigger are:
-
-- Create a GCS bucket with the provided name
-
-### PreDeploy
-To deploy this blueprint you must have an active billing account and billing permissions.
-
-## Architecture
-![alt text for diagram](https://www.link-to-architecture-diagram.com)
-1. Architecture description step no. 1
-2. Architecture description step no. 2
-3. Architecture description step no. N
-
-## Documentation
-- [Hosting a Static Website](https://cloud.google.com/storage/docs/hosting-static-website)
-
-## Deployment Duration
-Configuration: X mins
-Deployment: Y mins
-
-## Cost
-[Blueprint cost details](https://cloud.google.com/products/calculator?id=02fb0c45-cc29-4567-8cc6-f72ac9024add)
+This module makes it easy to create Google Cloud Scheduler across various regions which can be used to create jobs that can publish a PubSub message or an HTTP request every X interval of time, using a crontab format string It supports creating public, private, forwarding, peering, reverse_lookup and service directory zones.
 
 ## Usage
 
