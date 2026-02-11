@@ -92,7 +92,7 @@ spec:
         connections:
           - source:
               source: github.com/terraform-google-modules/terraform-google-pubsub
-              version: ~> 8.3.2
+              version: ">= 8.3.2"
             spec:
               outputExpr: id
               inputPath: topic_name
