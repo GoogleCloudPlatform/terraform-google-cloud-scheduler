@@ -8,6 +8,15 @@ and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 This changelog is generated automatically based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## [0.1.1](https://github.com/GoogleCloudPlatform/terraform-google-cloud-scheduler/compare/v0.1.0...v0.1.1) (2026-02-11)
+
+
+### Bug Fixes
+
+* Update version constraint for PubSub module ([6a78547](https://github.com/GoogleCloudPlatform/terraform-google-cloud-scheduler/commit/6a785474bb4ddf09959c273ce649dfa512738a49))
+* Update version constraint for PubSub module ([38b8409](https://github.com/GoogleCloudPlatform/terraform-google-cloud-scheduler/commit/38b8409db94dd0fc4b6298e2157aaa269baddef6))
+* Update version constraint for PubSub module ([38b8409](https://github.com/GoogleCloudPlatform/terraform-google-cloud-scheduler/commit/38b8409db94dd0fc4b6298e2157aaa269baddef6))
+
 ## 0.1.0 (2026-02-04)
 
 
