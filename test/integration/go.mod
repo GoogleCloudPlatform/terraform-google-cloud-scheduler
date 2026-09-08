@@ -3,7 +3,7 @@ module github.com/terraform-google-modules/cloud-scheduler/test/integration
 go 1.24.0
 
 require (
-	github.com/GoogleCloudPlatform/cloud-foundation-toolkit/infra/blueprint-test v0.11.1
+	github.com/GoogleCloudPlatform/cloud-foundation-toolkit/infra/blueprint-test v0.18.0
 	github.com/stretchr/testify v1.8.4
 )
 
