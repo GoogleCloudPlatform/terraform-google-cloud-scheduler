@@ -109,7 +109,7 @@ variable "http_target" {
     uri         = string
     http_method = optional(string)
     body        = optional(string)
-    oath_token = optional(object({
+    oauth_token = optional(object({
       service_account_email = string
       scope                 = optional(string)
     }))
